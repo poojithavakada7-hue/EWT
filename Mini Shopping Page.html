@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini Shopping Page</title>
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav {
+    background-color: white;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 2px 5px gray;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #555;
+}
+
+.welcome {
+    text-align: center;
+    padding: 70px 20px;
+    background-color: #e3f2fd;
+}
+
+.welcome h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.welcome p {
+    font-size: 18px;
+}
+
+.title {
+    text-align: center;
+    margin: 40px 0 25px;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.product {
+    width: 250px;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #ccc;
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    height: 150px;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product p {
+    color: #666;
+    margin: 10px 0;
+}
+
+.product h3 {
+    font-size: 22px;
+    margin: 15px;
+}
+
+button {
+    padding: 10px 25px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 25px;
+    background-color: #222;
+    color: white;
+    text-align: center;
+}
+</style>
+<body>
+
+    <header>
+        <h1>🛒 My Shop</h1>
+        <p>Simple Online Shopping</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Offers</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <section class="welcome">
+        <h1>Welcome to My Shop</h1>
+        <p>Find your favorite products at great prices.</p>
+    </section>
+
+    <h2 class="title">Our Products</h2>
+
+    <section class="products">
+
+        <div class="product">
+            <div class="product-image">👕</div>
+            <h2>T-Shirt</h2>
+            <p>Comfortable cotton T-shirt.</p>
+            <h3>₹499</h3>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image">👟</div>
+            <h2>Shoes</h2>
+            <p>Stylish and comfortable shoes.</p>
+            <h3>₹999</h3>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image">🎒</div>
+            <h2>Backpack</h2>
+            <p>Perfect bag for college students.</p>
+            <h3>₹699</h3>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image">⌚</div>
+            <h2>Smart Watch</h2>
+            <p>Modern watch with useful features.</p>
+            <h3>₹1499</h3>
+            <button>Add to Cart</button>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 My Shop | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
