@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Aahara360</title>
+
+
+    <!-- ================= CSS ================= -->
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eef7f1,
+                    #ffffff
+                );
+
+            padding: 20px;
+        }
+
+
+        /* ================= CARD ================= */
+
+        .auth-container {
+
+            width: 100%;
+            max-width: 430px;
+        }
+
+
+        .auth-card {
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 22px;
+
+            box-shadow:
+                0 15px 40px
+                rgba(0, 0, 0, 0.10);
+        }
+
+
+        /* ================= LOGO ================= */
+
+        .auth-logo {
+
+            text-align: center;
+
+            font-size: 28px;
+
+            font-weight: bold;
+
+            color: #176b47;
+
+            margin-bottom: 25px;
+        }
+
+
+        .auth-logo span {
+
+            color: #b47a35;
+        }
+
+
+        /* ================= TITLE ================= */
+
+        h1 {
+
+            text-align: center;
+
+            color: #1d2923;
+
+            font-size: 28px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .subtitle {
+
+            text-align: center;
+
+            color: #777;
+
+            font-size: 14px;
+
+            line-height: 1.5;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* ================= FORM ================= */
+
+        form {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 8px;
+        }
+
+
+        label {
+
+            color: #333;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            margin-top: 8px;
+        }
+
+
+        input {
+
+            width: 100%;
+
+            padding: 14px 15px;
+
+            border: 1px solid #d9dedb;
+
+            border-radius: 10px;
+
+            outline: none;
+
+            font-size: 14px;
+
+            transition: 0.2s;
+        }
+
+
+        input:focus {
+
+            border-color: #176b47;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(23, 107, 71, 0.10);
+        }
+
+
+        /* ================= LOGIN BUTTON ================= */
+
+        .login-btn {
+
+            margin-top: 20px;
+
+            width: 100%;
+
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 25px;
+
+            background: #176b47;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+
+        .login-btn:hover {
+
+            background: #0f5739;
+
+            transform: translateY(-1px);
+        }
+
+
+        .login-btn:disabled {
+
+            background: #9bb8aa;
+
+            cursor: not-allowed;
+
+            transform: none;
+        }
+
+
+        /* ================= MESSAGE ================= */
+
+        #message {
+
+            text-align: center;
+
+            font-size: 14px;
+
+            margin-top: 15px;
+
+            min-height: 20px;
+        }
+
+
+        /* ================= SWITCH ================= */
+
+        .switch {
+
+            text-align: center;
+
+            margin-top: 25px;
+
+            font-size: 14px;
+
+            color: #777;
+        }
+
+
+        .switch a {
+
+            color: #176b47;
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+
+        .switch a:hover {
+
+            text-decoration: underline;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 500px) {
+
+            .auth-card {
+
+                padding: 30px 22px;
+            }
+
+
+            h1 {
+
+                font-size: 24px;
+            }
+
+
+            .auth-logo {
+
+                font-size: 25px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= LOGIN UI ================= -->
+
+    <div class="auth-container">
+
+        <div class="auth-card">
+
+
+            <!-- Logo -->
+
+            <div class="auth-logo">
+
+                🌿 Aahara<span>360</span>
+
+            </div>
+
+
+            <!-- Heading -->
+
+            <h1>
+                Welcome Back
+            </h1>
+
+
+            <p class="subtitle">
+
+                Continue your personalized
+                food and wellness journey.
+
+            </p>
+
+
+            <!-- Login Form -->
+
+            <form id="loginForm">
+
+
+                <!-- Email -->
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+
+                <!-- Password -->
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+
+                <!-- Login Button -->
+
+                <button
+                    type="submit"
+                    class="login-btn"
+                    id="loginBtn"
+                >
+
+                    Login →
+
+                </button>
+
+            </form>
+
+
+            <!-- Message -->
+
+            <p id="message"></p>
+
+
+            <!-- Signup -->
+
+            <p class="switch">
+
+                Don't have an account?
+
+                <a href="Signup.html">
+                    Create Account
+                </a>
+
+            </p>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script type="module">
+
+        /* =========================================
+           FIREBASE IMPORT
+        ========================================= */
+
+        import { auth }
+            from "./firebase-config.js";
+
+
+        import {
+            signInWithEmailAndPassword
+        }
+        from
+        "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
+
+
+
+        /* =========================================
+           GET HTML ELEMENTS
+        ========================================= */
+
+        const loginForm =
+            document.getElementById("loginForm");
+
+        const emailInput =
+            document.getElementById("email");
+
+        const passwordInput =
+            document.getElementById("password");
+
+        const message =
+            document.getElementById("message");
+
+        const loginBtn =
+            document.getElementById("loginBtn");
+
+
+
+        /* =========================================
+           LOGIN
+        ========================================= */
+
+        loginForm.addEventListener(
+            "submit",
+            async function(event) {
+
+                event.preventDefault();
+
+
+                const email =
+                    emailInput.value.trim();
+
+                const password =
+                    passwordInput.value;
+
+
+                /* Clear old message */
+
+                message.textContent = "";
+
+
+                /* Disable button */
+
+                loginBtn.disabled = true;
+
+                loginBtn.textContent =
+                    "Logging in...";
+
+
+                try {
+
+
+                    /* Firebase Login */
+
+                    const userCredential =
+                        await signInWithEmailAndPassword(
+                            auth,
+                            email,
+                            password
+                        );
+
+
+                    const user =
+                        userCredential.user;
+
+
+                    console.log(
+                        "Login successful:",
+                        user.uid
+                    );
+
+
+                    /* Success message */
+
+                    message.textContent =
+                        "Login successful! 🌿";
+
+
+                    message.style.color =
+                        "#176b47";
+
+
+                    /*
+                     * IMPORTANT:
+                     *
+                     * After successful login,
+                     * open onboarding page.
+                     */
+
+                    setTimeout(
+                        function() {
+
+                            window.location.href =
+                                "onboarding.html";
+
+                        },
+                        700
+                    );
+
+
+                }
+
+                catch(error) {
+
+
+                    console.error(
+                        "Login Error:",
+                        error
+                    );
+
+
+                    message.style.color =
+                        "#d93025";
+
+
+                    message.textContent =
+                        getFirebaseErrorMessage(
+                            error.code
+                        );
+
+
+                    /* Enable button again */
+
+                    loginBtn.disabled = false;
+
+                    loginBtn.textContent =
+                        "Login →";
+
+                }
+
+            }
+        );
+
+
+
+        /* =========================================
+           FIREBASE ERROR MESSAGES
+        ========================================= */
+
+        function getFirebaseErrorMessage(code) {
+
+
+            switch(code) {
+
+
+                case "auth/invalid-credential":
+
+                    return "Incorrect email or password.";
+
+
+                case "auth/user-not-found":
+
+                    return "No account found with this email.";
+
+
+                case "auth/wrong-password":
+
+                    return "Incorrect password.";
+
+
+                case "auth/invalid-email":
+
+                    return "Please enter a valid email.";
+
+
+                case "auth/too-many-requests":
+
+                    return "Too many login attempts. Please try again later.";
+
+
+                case "auth/user-disabled":
+
+                    return "This account has been disabled.";
+
+
+                default:
+
+                    return "Login failed. Please try again.";
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
