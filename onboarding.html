@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aahara360 | Personalize Your Journey</title>
+
+    <link rel="stylesheet" href="onboarding.css">
+</head>
+
+<body>
+
+    <div class="onboarding-container">
+
+        <!-- Logo -->
+        <div class="logo">
+            🌿 <span>Aahara</span><strong>360</strong>
+        </div>
+
+        <!-- Progress -->
+        <div class="progress-area">
+            <div class="progress-text">
+                <span id="stepText">Step 1 of 4</span>
+                <span id="progressPercent">25%</span>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progress"></div>
+            </div>
+        </div>
+
+
+        <!-- ================= STEP 1 ================= -->
+
+        <div class="step active" id="step1">
+
+            <div class="step-icon">🎯</div>
+
+            <h1>What brings you to Aahara360?</h1>
+
+            <p class="subtitle">
+                Choose your goals so we can personalize your food journey.
+            </p>
+
+            <div class="options">
+
+                <div class="option" data-value="Weight Loss">
+                    <span class="option-icon">⚖️</span>
+                    <div>
+                        <h3>Weight Loss</h3>
+                        <p>Build healthier eating habits</p>
+                    </div>
+                </div>
+
+                <div class="option" data-value="Weight Gain">
+                    <span class="option-icon">💪</span>
+                    <div>
+                        <h3>Weight Gain</h3>
+                        <p>Support healthy weight gain</p>
+                    </div>
+                </div>
+
+                <div class="option" data-value="Healthy Eating">
+                    <span class="option-icon">🥗</span>
+                    <div>
+                        <h3>Healthy Eating</h3>
+                        <p>Improve your everyday nutrition</p>
+                    </div>
+                </div>
+
+                <div class="option" data-value="Fitness">
+                    <span class="option-icon">🏋️</span>
+                    <div>
+                        <h3>Fitness</h3>
+                        <p>Fuel your active lifestyle</p>
+                    </div>
+                </div>
+
+                <div class="option" data-value="Wellness">
+                    <span class="option-icon">🌿</span>
+                    <div>
+                        <h3>Wellness</h3>
+                        <p>Focus on overall wellbeing</p>
+                    </div>
+                </div>
+
+                <div class="option" data-value="More Energy">
+                    <span class="option-icon">⚡</span>
+                    <div>
+                        <h3>More Energy</h3>
+                        <p>Make better food choices</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= STEP 2 ================= -->
+
+        <div class="step" id="step2">
+
+            <div class="step-icon">🍽️</div>
+
+            <h1>What's your food preference?</h1>
+
+            <p class="subtitle">
+                Tell us what type of food you prefer.
+            </p>
+
+            <div class="single-options">
+
+                <button class="food-option" data-value="Vegetarian">
+                    🥗 Vegetarian
+                </button>
+
+                <button class="food-option" data-value="Non-Vegetarian">
+                    🍗 Non-Vegetarian
+                </button>
+
+                <button class="food-option" data-value="Vegan">
+                    🌱 Vegan
+                </button>
+
+                <button class="food-option" data-value="Eggetarian">
+                    🥚 Eggetarian
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= STEP 3 ================= -->
+
+        <div class="step" id="step3">
+
+            <div class="step-icon">🚫</div>
+
+            <h1>Any dietary restrictions?</h1>
+
+            <p class="subtitle">
+                Select anything you want Aahara360 to consider.
+            </p>
+
+            <div class="restriction-options">
+
+                <label>
+                    <input type="checkbox" value="None">
+                    <span>✓</span> None
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Lactose">
+                    <span>🥛</span> Lactose
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Gluten">
+                    <span>🌾</span> Gluten
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Nuts">
+                    <span>🥜</span> Nuts
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Other">
+                    <span>➕</span> Other
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= STEP 4 ================= -->
+
+        <div class="step" id="step4">
+
+            <div class="step-icon">💰</div>
+
+            <h1>What's your daily food budget?</h1>
+
+            <p class="subtitle">
+                This helps us suggest affordable meals.
+            </p>
+
+            <div class="budget-box">
+
+                <label for="budget">Daily Food Budget</label>
+
+                <div class="input-money">
+                    <span>₹</span>
+
+                    <input
+                        type="number"
+                        id="budget"
+                        placeholder="150"
+                        min="1"
+                    >
+                </div>
+
+                <div class="budget-options">
+
+                    <button data-budget="100">₹100</button>
+                    <button data-budget="150">₹150</button>
+                    <button data-budget="250">₹250</button>
+                    <button data-budget="500">₹500+</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Navigation buttons -->
+
+        <div class="navigation">
+
+            <button
+                class="back-btn"
+                id="backBtn"
+                onclick="previousStep()"
+            >
+                ← Back
+            </button>
+
+            <button
+                class="next-btn"
+                id="nextBtn"
+                onclick="nextStep()"
+            >
+                Continue →
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="onboarding.js"></script>
+
+</body>
+</html>
